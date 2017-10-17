@@ -1,4 +1,4 @@
-# direct-marketing
+# Direct-marketing
 Data mining techniques to build customer profile models on predicting their subscription in the most recent campaign
 ## Requirements
 The python program should be interpreted in the python 3.X environment
