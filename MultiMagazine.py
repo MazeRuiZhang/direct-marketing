@@ -40,7 +40,6 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix'
     for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
         plt.text(j, i, format(cm[i, j], fmt),
                  horizontalalignment="center", size = "xx-large")
-    #plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 

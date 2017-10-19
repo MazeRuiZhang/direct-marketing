@@ -1,11 +1,11 @@
 # Direct-marketing
-Data mining techniques to build customer profile models on predicting their subscription in the most recent campaign
+Data mining techniques to build customer profile models on predicting their subscriptions in the most recent campaign
 ## Requirements
 The python program should be interpreted in the python 3.X environment
-The modules required are: sklearn, numpy, pandas, matplotlib, itertools
+The modules required are sklearn, numpy, pandas, matplotlib and itertools
 ## Installation
 Place the MultiMagazine.py at the working directory and data set of directMarketing.csv at the working directory’s subfolder as “.\data\”
-
+## Initialization
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
