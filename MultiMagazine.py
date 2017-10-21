@@ -56,7 +56,7 @@ def plot_ROC(fpr, tpr, title='ROC curve'):
     plt.legend(loc="lower right")
 
 def plot_precision_recall():
-    precision, recall, _ = precision_recall_curve(y_test, y_score)
+    precision, recall, thresholds = precision_recall_curve(y_test, y_score)
     plt.step(recall, precision, color='b', alpha=0.2, where='post')
     plt.fill_between(recall, precision, step='post', alpha=0.2, color='b')
     plt.xlabel('Recall')
@@ -123,7 +123,7 @@ plt.figure(2, figsize=(16,12), dpi=320)
 plt.subplot(221)
 plot_ROC(fpr_tree, tpr_tree, title="ROC of the Decision Tree Model")
 
-# Plot the recision_recall curve
+# Plot the precision_recall curve
 plt.figure(3, figsize=(16,12), dpi=160)
 plt.subplot(221)
 average_precision = average_precision_score(y_test, y_score)
@@ -152,7 +152,7 @@ plt.figure(2)
 plt.subplot(222)
 plot_ROC(fpr_svm, tpr_svm, title="ROC of the SVM Model")
 
-# Plot the recision_recall curve
+# Plot the precision_recall curve
 plt.figure(3)
 plt.subplot(222)
 average_precision = average_precision_score(y_test, y_score)
@@ -181,7 +181,7 @@ plt.figure(2)
 plt.subplot(223)
 plot_ROC(fpr_gnb, tpr_gnb, title="ROC of the Naive Bayes Model")
 
-# Plot the recision_recall curve
+# Plot the precision_recall curve
 plt.figure(3)
 plt.subplot(223)
 average_precision = average_precision_score(y_test, y_score)
@@ -211,7 +211,7 @@ plt.figure(2)
 plt.subplot(224)
 plot_ROC(fpr_logit, tpr_logit, title="ROC of the Logistic Regression Model")
 
-# Plot the recision_recall curve
+# Plot the precision_recall curve
 plt.figure(3)
 plt.subplot(224)
 average_precision = average_precision_score(y_test, y_score)
